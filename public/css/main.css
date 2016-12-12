@@ -38,3 +38,8 @@ a { color: #00B7FF; }
 #chefs {
   margin-top: 50px;
 }
+
+#about {
+  text-align: left;
+  padding: 50px;
+}
