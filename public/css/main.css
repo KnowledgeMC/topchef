@@ -1,0 +1,40 @@
+*,
+html,
+body {
+  box-sizing: border-box;
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 14px;
+  padding: 50px;
+}
+
+a { color: #00B7FF; }
+
+#logo {
+  display: block;
+  margin: auto;
+  width: 50%;
+  padding-top: 50px;
+
+}
+
+#welcomeMessage{
+  text-align: center
+}
+
+#disclaimerText {
+  text-align: left;
+  padding: 20px;
+}
+
+#consent {
+  text-align: center;
+  font-size: 30px;
+
+}
+
+#chefs {
+  margin-top: 50px;
+}
