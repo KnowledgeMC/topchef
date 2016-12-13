@@ -1,12 +1,38 @@
 var express = require('express'),
     router  = new express.Router();
 
+//Auth related routes
+var passport = require('passport');
+
 // Require controllers.
 var pagesController = require('../controllers/pages');
 var usersController = require('../controllers/users');
 
+//Google OAuth login Route
+router.get('/auth/google', passport.authenticate(
+  'google',
+  { scope: ['profile', 'email'] }
+));
+//Google OAuth callback Route
+router.get('/oauth2callback', passport.authenticate(
+  'google',
+  {
+    successRedirect : '/',
+    failureRedirect : '/'
+  }
+));
+
+//OAuth Logout Route
+router.get('/logout', function(req, res){
+  req.logout();
+  res.redirect('/');
+});
+
 // root path:
-router.get('/', pagesController.welcome);
+router.get('/', function(req, res){
+  res.render('./pages/welcome', { user: req.user });
+});
+
 //Chefs path:
 router.get('/chefs', pagesController.chefs);
 //Disclaimer path:
