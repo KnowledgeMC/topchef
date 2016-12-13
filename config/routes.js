@@ -32,11 +32,18 @@ router.get('/logout', function(req, res){
 router.get('/', function(req, res){
   res.render('./pages/welcome', { user: req.user });
 });
-// about path with user
+// Fix paths with user for login/logout UI
 router.get('/about', function(req, res){
   res.render('./pages/about', { user: req.user });
 });
 
+router.get('/chefs', function(req, res){
+  res.render('./pages/chefs', { user: req.user });
+});
+
+router.get('/disclaimer', function(req, res){
+  res.render('./pages/disclaimer', { user: req.user });
+});
 
 //Chefs path:
 router.get('/chefs', pagesController.chefs);
