@@ -14,10 +14,15 @@ var about = function(req,res,next){
   res.render('pages/about');
 };
 
+var harold = function(req, res, next){
+  res.render('pages/harold');
+};
+
 
 module.exports = {
   welcome: welcome,
   chefs: chefs,
   disclaimer: disclaimer,
-  about: about
+  about: about,
+  harold: harold
 };

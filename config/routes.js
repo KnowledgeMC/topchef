@@ -32,6 +32,11 @@ router.get('/logout', function(req, res){
 router.get('/', function(req, res){
   res.render('./pages/welcome', { user: req.user });
 });
+// about path with user
+router.get('/about', function(req, res){
+  res.render('./pages/about', { user: req.user });
+});
+
 
 //Chefs path:
 router.get('/chefs', pagesController.chefs);
@@ -39,7 +44,8 @@ router.get('/chefs', pagesController.chefs);
 router.get('/disclaimer', pagesController.disclaimer);
 //About path:
 router.get('/about', pagesController.about);
-
+//Chefs:
+router.get('/harold', pagesController.harold);
 
 
 
