@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="An Unoffical Top Chef Fansite">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/chefs">Chefs</a></li>
+                <li><a href="/about">About</a></li>
+                <% if (user) { %>
+                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
+                <% } else { %>
+                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <img id="logo" src="/images/UnoffcialTopChefKitchen.jpg" alt="siteLogo">
+  <div class="jumbotron" id="welcomeMessage">
+    <h2>Season 12 | Mei Lin</h4>
+  </div>
+  <main>
+    <div class="chefPic">
+      <img src="/images/chefs/12-Mei.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Mei Lin<br>
+      <span style="font-weight:bold"> Bio: </span>Mei grew up working alongside her father at their family-owned-and-operated restaurant outside Detroit, where she learned the fundamentals of being a well-rounded cook and running a restaurant. Throughout the years she has had the privilege of working for some of the most revered chefs in the industry such as Michael Symon (Roast), Marcus Samuelsson (C-House) and Wolfgang Puck, whose company provided much of her early training and refinement of skills during her three-year involvement. After spending time cutting her teeth at Spago Las Vegas, she eventually moved to West Hollywood to join Michael Voltaggio's opening team at ink. in Los Angeles. She spent the last three years there moving up the ranks to eventually become a sous chef at the critically-acclaimed establishment.
+
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li><a href="http://www.restaurantlaurel.com/">ink (Sous Chef)</a> | <a href="https://www.yelp.com/biz/ink-los-angeles-2">Yelp Link</a></li>
+
+        </ul>
+        <span style="font-weight:bold">Personal Website:</span> <a href="http://meihualin.squarespace.com/">http://meihualin.squarespace.com/</a><br>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/meilin21">@meilin21</a>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="/disclaimer">Disclaimer</a> | <a href="/about">About</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2016 by <span><a href="http://twitter.com/knowledgemc">Knowledge.</a></span> All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

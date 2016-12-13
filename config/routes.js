@@ -64,6 +64,10 @@ router.get('/hosea', function(req, res){
   res.render('./pages/hosea', { user: req.user });
 });
 
+router.get('/michael', function(req, res){
+  res.render('./pages/michael', { user: req.user });
+});
+
 router.get('/kevin', function(req, res){
   res.render('./pages/kevin', { user: req.user });
 });

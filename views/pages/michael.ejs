@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="An Unoffical Top Chef Fansite">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/chefs">Chefs</a></li>
+                <li><a href="/about">About</a></li>
+                <% if (user) { %>
+                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
+                <% } else { %>
+                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <img id="logo" src="/images/UnoffcialTopChefKitchen.jpg" alt="siteLogo">
+  <div class="jumbotron" id="welcomeMessage">
+    <h2>Season 6 | Michael Voltaggio</h4>
+  </div>
+  <main>
+    <div class="chefPic">
+      <img src="/images/chefs/06-Michael.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Michael Voltaggio<br>
+      <span style="font-weight:bold"> Bio: </span>Voltaggio did not have the money to attend culinary school. Instead, he did a long apprenticeship
+      in The Greenbrier's prestigious culinary apprenticeship program. Michael completed his Greenbrier apprenticeship under Certified Master Chef
+      Peter Timmins at the age of 21. He later held jobs at the Ritz Carlton Hotel Naples, Florida under chef Peter Timmins and Charlie Palmer's
+      Dry Creek Kitchen in Healdsburg. During his tenure as Chef de Cuisine at The Bazaar by Jose Andres, the restaurant was nominated for
+      the James Beard Foundation Award for Best New Restaurant in 2008. Voltaggio was the Chef de Cuisine at The Dining Room, Langham Huntington
+      Hotel & Spa in Pasadena, which received several culinary awards, including the AAA Five Diamond Award, the Mobil Five-Star Award,
+      and a Michelin Star, one of the few held by restaurants in the US. Voltaggio left The Dining Room in 2010 and announced plans to
+      open his own restaurant in West Hollywood, CA, in a space owned by former Hollywood superagent Michael Ovitz. After several delays, the
+      highly successful ink. opened on September 21, 2011. Voltaggio's goal with the restaurant was to create what he called "modern Los Angeles
+      cuisine." The restaurant seats 60 in the dining room with a private room that can accommodate an additional 10 guests.
+      It was named America's best new restaurant by GQ Magazine in March 2012. While publicly developing and readying ink. for its highly
+      anticipated debut, Voltaggio was quietly planning a smaller restaurant around the corner, a sandwich shop called ink.sack.
+      Voltaggio designed and built the shop himself and surprised the culinary world when he opened the small restaurant with little notice
+      or fanfare on August 11, 2011. Voltaggio appeared in September, 2010 on the finale of season seven of Top Chef and as a guest judge in Season 3 of Top Chef Canada.
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li><a href="http://mvink.com/">ink</a> | <a href="https://www.yelp.com/biz/ink-los-angeles-2">Yelp Link</a></li>
+        </ul>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/mvoltaggio/">@mvoltaggio</a>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="/disclaimer">Disclaimer</a> | <a href="/about">About</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2016 by <span><a href="http://twitter.com/knowledgemc">Knowledge.</a></span> All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
