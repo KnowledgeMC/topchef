@@ -43,3 +43,22 @@ a { color: #00B7FF; }
   text-align: left;
   padding: 50px;
 }
+
+.chefPic {
+  display: block;
+  /*position: relative;*/
+  padding: 25px;
+  margin: auto;
+}
+
+.bio {
+  /*display: inline-block;*/
+  /*position: relative;*/
+  margin: 25px;
+  font-size: 15px;
+}
+
+.links {
+  margin: 25px;
+  font-size: 15px;
+}
