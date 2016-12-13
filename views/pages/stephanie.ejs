@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="An Unoffical Top Chef Fansite">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/chefs">Chefs</a></li>
+                <li><a href="/about">About</a></li>
+                <% if (user) { %>
+                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
+                <% } else { %>
+                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <img id="logo" src="/images/UnoffcialTopChefKitchen.jpg" alt="siteLogo">
+  <div class="jumbotron" id="welcomeMessage">
+    <h2>Season 4 | Stephanie Izard</h4>
+  </div>
+  <main>
+    <div class="chefPic">
+      <img src="/images/chefs/04-Stephanie.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Stephanie Izard<br>
+      <span style="font-weight:bold"> Bio: </span> She is the co-owner and executive chef of three award-winning Chicago restaurants,
+      Girl and the Goat, and Little Goat, duck duck goat, and opened her first restaurant, Scylla (now closed) as chef-owner at the
+      age of 27. Izard won a coveted James Beard Foundation Award (Best Chef: Great Lakes) in 2013 for her work at Girl and the Goat.
+      Izard has made a number of appearances on Top Chef since her win, both as a guest judge and participant (on Top Chef Duels).
+      Stephanie was the show's first female winner, and claimed a $100,000 prize. Over the course of the season, Izard won two
+      "Quickfire" challenges, five elimination challenges, and was on the top eleven out of fourteen episodes. In the Puerto Rico-based
+      finale, she chose Eric Ripert to assist with her prep work in preparing a four-course tasting menu for judging, which prevailed
+      over the menus offered by fellow contestants Richard Blais and Lisa Fernandes.
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li><a href="http://girlandthegoat.com/">Girl and the Goat</a> | <a href="https://www.yelp.com/biz/girl-and-the-goat-chicago">Yelp Link</a></li>
+          <li><a href="http://littlegoatchicago.com/">Little Goat Chicago</a> | <a href="https://www.yelp.com/biz/little-goat-diner-chicago-4">Yelp Link</a></li>
+        </ul>
+        <span style="font-weight:bold">Personal Website:</span> <a href="http://www.stephanieizard.com/">http://www.stephanieizard.com/</a><br>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/stephandthegoat/">@stephandthegoat</a>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="/disclaimer">Disclaimer</a> | <a href="/about">About</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2016 by <span><a href="http://twitter.com/knowledgemc">Knowledge.</a></span> All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

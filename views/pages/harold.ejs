@@ -12,7 +12,7 @@
                 <a class="navbar-brand" href="#">Top Chef Kitchen</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="/">Home</a></li>
                 <li><a href="/chefs">Chefs</a></li>
                 <li><a href="/about">About</a></li>
                 <% if (user) { %>
@@ -27,11 +27,39 @@
   <div class="jumbotron" id="welcomeMessage">
     <h2>Season 1 | Harold Dieterle</h4>
   </div>
-
   <main>
+    <div class="chefPic">
+      <img src="/images/chefs/01-Harold.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Harold Dieterle<br>
+      <span style="font-weight:bold"> Bio: </span> Harold Dieterle was the winning chef of Top Chef season 1.
+      Harold was a 1997 graduate of the Culinary Institute of America and his professional career began at
+      Della Femina in the Hamptons for two years. That was followed by three years at Red Bar and two years
+      at 1770 House, both in New York City. For almost five years, he was a sous-chef at The Harrison restaurant in New York.
+      In October 2005, Dieterle competed in and won the first season of Top Chef. Following his win on the series,
+      he left The Harrison in early 2006 to plan the opening of his own restaurant. His first restaurant, Perilla,
+      opened in May 2007 in New York City. In 2010 he opened Kin Shop, a Thai restaurant. Most recently, he opened
+      The Marrow in New York City. The food at The Marrow was a mashup of Italian and German cuisine and an ode to
+      Dieterle's heritage. The Marrow closed its doors in 2014 after less than two years. In late 2015, Dieterle
+      closed his two remaining restaurants, Kin Shop and Perilla. Dieterle said he was taking a leave from the
+      restaurant and hospitality business. In a positive 2010 review of Kin Shop in the magazine New York,
+      food critic Adam Platt called Dieterle "the original (and easily most talented) winner" of Top Chef.
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li style="text-decoration: line-through;">Perilla</li>
+          <li style="text-decoration: line-through;">Kin Shop</li>
+          <li style="text-decoration: line-through;">The Marrow</li>
+          <li>All his restaurants have been permanently closed after he announced his retirement from the industry</li>
+        </ul>
+        <span style="font-weight:bold">Personal Website:</span> <a href="http://www.harolddieterle.com/">http://www.harolddieterle.com/</a><br>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/harolddieterle">@harolddieterle</a>
 
-
-
+      </div>
+    </div>
   </main>
 
   <%- include('../partials/scripts') %>

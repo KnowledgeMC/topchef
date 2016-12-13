@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="An Unoffical Top Chef Fansite">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/chefs">Chefs</a></li>
+                <li><a href="/about">About</a></li>
+                <% if (user) { %>
+                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
+                <% } else { %>
+                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <img id="logo" src="/images/UnoffcialTopChefKitchen.jpg" alt="siteLogo">
+  <div class="jumbotron" id="welcomeMessage">
+    <h2>Season 8 | Richard Blais</h4>
+  </div>
+  <main>
+    <div class="chefPic">
+      <img src="/images/chefs/08-Richard.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Richard Blais<br>
+      <span style="font-weight:bold"> Bio: </span> Richard Blais was born in Uniondale, New York. He received an AOS in culinary arts from
+      The Culinary Institute of America and has studied under acclaimed chefs Thomas Keller, Daniel Boulud, and Ferran Adrià.Blais was
+      the runner-up for the fourth season of Top Chef and returned several seasons later to win Top Chef: All-Stars, and has been a
+      recurring judge in season 12 (Boston) and Season 13 (California). A native New Yorker, Blais relocated to Atlanta, GA in 2000 where he founded Trail Blais, a creative culinary company that has consulted on, designed and operates some of Atlanta’s most popular eateries, including FLIP Burger Boutique, which now has numerous locations in Atlanta, Nashville, and Alabama.
+
+In February 2013, he released his debut cookbook, Try This at Home: Recipes From My Head to Your Plate, which reveals a simplified approach to adventurous cooking and offers new flavor combinations for home cooks to reinvent classic dishes. Try This at Home was nominated for a James Beard Foundation Award 2014 in the category of Cookbook: General Cooking. Most recently, Blais opened Juniper & Ivy in San Diego, California, his first West Coast venture.
+
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li><a href="https://www.flipburgerboutique.com/">Flip Burger Boutique</a> | <a href="https://www.yelp.com/biz/flip-burger-boutique-atlanta-4">Yelp Link</a></li>
+          <li><a href="http://juniperandivy.com/">Juniper and Ivy</a> | <a href="https://www.yelp.com/biz/juniper-and-ivy-san-diego-2">Yelp Link</a></li>
+        </ul>
+        <span style="font-weight:bold">Personal Website:</span> <a href="http://www.richardblais.net/">http://www.richardblais.net/</a><br>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/richardblais">@richardblais</a>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="/disclaimer">Disclaimer</a> | <a href="/about">About</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2016 by <span><a href="http://twitter.com/knowledgemc">Knowledge.</a></span> All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

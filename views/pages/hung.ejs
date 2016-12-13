@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="An Unoffical Top Chef Fansite">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="/chefs">Chefs</a></li>
+                <li><a href="/about">About</a></li>
+                <% if (user) { %>
+                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
+                <% } else { %>
+                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
+                <% } %>
+            </ul>
+        </div>
+    </nav>
+    <img id="logo" src="/images/UnoffcialTopChefKitchen.jpg" alt="siteLogo">
+  <div class="jumbotron" id="welcomeMessage">
+    <h2>Season 3 | Hung Huynh</h4>
+  </div>
+  <main>
+    <div class="chefPic">
+      <img src="/images/chefs/03-Hung.jpg">
+    </div>
+    <div class="bio">
+      <span style="font-weight:bold"> Name: </span>Hung Huynh<br>
+      <span style="font-weight:bold"> Bio: </span> Born in Vietnam, Huynh was raised in Pittsfield, Massachusetts,
+      and began his culinary training as a young boy in his immigrant parents' Vietnamese restaurant.
+      He has a degree from the Culinary Institute of America;mhe cooked at restaurants including Per Se and Gilt in NYC,
+      and at the time of season three Top Chef's airing, he was the executive sous chef at the Guy Savoy restaurant in Las Vegas.
+      Huynh also served as a guest judge in episode 12 of season four, and in the quickfire challenge of the eighth episode of
+      season five of Top Chef. Huynh аppeared in September 2010 on the finale of season seven of Top Chef and assisted
+      Angelo Sosa as his sous chef. Huynh participated in the 2008 Bocuse d'Or USA culinary contest, competing to represent
+      the U.S. in the 2009 international Bocuse d'Or. Although Huynh won the "Best Fish Award", the gold medal was awarded to
+      Timothy Hollingsworth. From the spring of 2008 through August 2009, Huynh was the guest executive chef at Solo restaurant
+      in New York City. From August 2009 through late 2011, he was the executive chef of Ajna Bar (formerly Buddha Bar)
+      in New York City. Huynh has opened The General, Catch and also Catch Miami with the EMM Group.
+      The General showcases modern Asian fare while Catch features mainly seafood. In February 2015, he cut ties with EMM,
+      citing creative differences. Currently, Huynh is exploring new options for restaurants and hosting a culinary pop-up series.
+
+
+    </div>
+    <div class="links">
+      <div>
+        <span style="font-weight:bold">Restaurants:</span>
+        <ul>
+          <li style="text-decoration: line-through;">Ajna Bar</li>
+          <li style="text-decoration: line-through;">The General</li>
+          <li><a href="http://catchrestaurants.com/catchnyc/">The Catch</a> | <a href="https://www.yelp.com/biz/catch-new-york-3">Yelp Link</a></li>
+        </ul>
+        <span style="font-weight:bold">Personal Website:</span> <a href="http://www.chefhunghuynh.com/">http://www.chefhunghuynh.com/</a><br>
+        <span style="font-weight:bold">Instagram:</span> <a href="https://www.instagram.com/chefhunghuynh">@chefhunghuynh</a>
+
+      </div>
+    </div>
+  </main>
+
+  <%- include('../partials/scripts') %>
+  <div class="container">
+  <div class="row">
+  <hr>
+    <div class="col-lg-12">
+      <div class="col-md-8">
+        <a href="/disclaimer">Disclaimer</a> | <a href="/about">About</a>
+      </div>
+      <div class="col-md-4">
+        <p class="muted pull-right">© 2016 by <span><a href="http://twitter.com/knowledgemc">Knowledge.</a></span> All rights reserved.</p>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
