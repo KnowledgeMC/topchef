@@ -6,20 +6,16 @@
   <link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
-<nav class="navbar navbar-inverse navbar-fixed-top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">Top Chef Kitchen</a>
+                <a class="navbar-brand" href="/">Top Chef Kitchen</a>
             </div>
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="/">Home</a></li>
                 <li><a href="/chefs">Chefs</a></li>
                 <li><a href="/about">About</a></li>
-                <% if (user) { %>
-                  <li><a href="/logout" class="logo" id='user-name' value=<%= user.name %>>Hi, <%= user.name %> | Logout</a></li>
-                <% } else { %>
-                  <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
-                <% } %>
+                <li><a href="/auth/google" class="btn btn-block btn-social btn-google"><span class="fa fa-google"></span>  Login with Google</a></li>
             </ul>
         </div>
     </nav>
@@ -27,8 +23,8 @@
   <div class="jumbotron" id="welcomeMessage">
     <h2>About this Site</h4>
   <div id="about">
-    The Unofficial Top Chef Kitchen is a directory of all the winners from the Top Chef TV show.
-    Users can read about their favorite chefs as well as post comments about their favorite dishes or moments from the show.
+    Welcome to The Unofficial Top Chef Kitchen! This website is a directory of all the winning chefs from the hit TV show Top Chef.
+    Visitors can read all about their favorite chefs in the bio section and find links to the chefs' restaurants, their Yelp pages, and their Instagram feeds.
   </div>
 
   </div>
