@@ -3,7 +3,7 @@
 [Check out the site!](https://powerful-ravine-52199.herokuapp.com/)
 
 ###Description:
-Welcome to the Unofficial Top Chef Kitchen! This site is a directory of all the winning chefs from the hit TV show [Top Chef](http://www.bravotv.com/top-chef). Visitors to the site can read all abotu their favorite chefs in the Bio section and find links to the chefs' restuarants, their Yelp pages, and their Instagram feeds.  
+Welcome to the Unofficial Top Chef Kitchen! This site is a directory of all the winning chefs from the hit TV show [Top Chef](http://www.bravotv.com/top-chef). Visitors to the site can read all about their favorite chefs in the Bio section and find links to the chefs' restaurants, their Yelp pages, and their Instagram feeds.  
 
 ###Technologies Used:
 * HTML
